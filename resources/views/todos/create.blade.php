@@ -5,6 +5,7 @@
         {{ Form::bsText('title') }}
         {{ Form::bsTextArea('content') }}
         {{ Form::bsText('due') }}
+        {{ Form::hidden('_method', 'PUT') }}
         {{ Form::bsSubmit('Submit') }}
     {!! Form::close() !!}
 @endsection
