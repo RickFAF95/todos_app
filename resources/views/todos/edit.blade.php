@@ -7,6 +7,6 @@
     {{ Form::bsTextArea('content', $todo->content) }}
     {{ Form::bsText('due', $todo->due) }}
     {{ Form::hidden('_method', 'PUT') }}
-    {{ Form::bsSubmit('Submit') }}
+    {{ Form::bsSubmit('Submit', ['class' => 'btn btn-primary']) }}
     {!! Form::close() !!}
 @endsection
