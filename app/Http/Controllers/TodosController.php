@@ -92,6 +92,15 @@ class TodosController extends Controller
         return redirect('/')->with('success', 'Todo Updated');
     }
 
+    public function completed($id)
+    {
+        $todo = Todo::find($id);
+        $todo->completed = 1;
+        $todo->save();
+
+        return redirect()->back();
+    }
+
     /**
      * Remove the specified resource from storage.
      *

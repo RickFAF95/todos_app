@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-    <a class="btn btn-outline-primary" href="/todo/{{$todo->id}}">Go Back</a>
+    <a class="btn btn-outline-primary" href="{{ route('todos.show', ['id' => $todo->id]) }}">Go Back</a>
     <h1><br>Edit Todo</h1>
     {!! Form::open(['action' => ['TodosController@update', $todo->id], 'method' => 'POST']) !!}
     {{ Form::bsText('title', $todo->title) }}
